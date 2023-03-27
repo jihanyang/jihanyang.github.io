@@ -4,7 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <style type="text/css">
+        body {
+          background-color: #f5f5f5
+        }
         .container {
+            background-color: #fff;
             zoom: 1;
             margin-left: auto;
             margin-right: auto;
@@ -12,6 +16,8 @@
             text-align: left;
             width: 100%;
             max-width: 800px;
+            padding: 20px;
+            margin: 20px auto;
         }
         .content {
             margin-bottom: -10px;
@@ -30,6 +36,12 @@
           color: rgb(252, 76, 122);
           border-color: rgb(252, 76, 122);
         }
+        .publogo { width: 230px; max-height: 190px; margin-right : 15px; float : left; border : 0;}
+        .publication { clear : left; padding-bottom : 0px; }
+        .publication p { height : 100px; padding-top : 5px;}
+        .publication strong a { font-size: 17px; color : #0000A0; }
+        .publication .links { position : relative; top : 15px }
+        .publication .links a { margin-right : 20px; }
     </style>
     <title>Jihan Yang's Homepage</title>
     <!-- <link rel="icon" href="../content/images/icon.png"> -->
@@ -62,27 +74,20 @@
 <hr style="margin-top:-16px;margin-bottom:10px;" />
 
 <p>I am currently a PhD student (2020-) at EEE, The University of Hong Kong, advised by <a href="https://xjqi.github.io/">Dr. Xiaojuan Qi</a>. Before that
-I obtained my Bachelor's degree from Sun Yat-sen University, supervised by <a href="http://www.linliang.net/">Prof. Liang Lin</a> and <a href="http://guanbinli.com/">Prof. Guanbin Li</a>. I am also working closely with Ruijia Xu, <a href="https://shishaoshuai.com/">Dr. Shaoshuai Shi</a>, Runyu Ding and <a href="https://wang-zhe.me/">Dr. Zhe Wang</a>.
+I obtained my Bachelor's degree from Sun Yat-sen University, supervised by <a href="http://www.linliang.net/">Prof. Liang Lin</a> and <a href="http://guanbinli.com/">Prof. Guanbin Li</a>. I am also working closely with Ruijia Xu, <a href="https://shishaoshuai.com/">Dr. Shaoshuai Shi</a>, <a href="https://dingry.github.io/">Runyu Ding</a> and <a href="https://wang-zhe.me/">Dr. Zhe Wang</a>.
 </p>
 
-<p>My research interests focus on machine perception and deep learning, especially the unsupervised learning, tranfer learning and 2D/3D scene understanding related topics.</p>
+<p>My research interests focus on Embodied AI and 3D vision, especially the unsupervised representation learning, tranfer learning and multi-modality learning.</p>
 
 <h2 id="news" style="color:rgb(59, 103, 236)">News</h2>
 <hr style="margin-top:-16px;margin-bottom:10px;" />
 
 <ul>
+  <li>[2023/02] One paper accepted by CVPR 2023.</li>
   <li>[2022/09] One paper accepted by T-PAMI.</li>
   <li>[2022/09] One paper accepted by NeurIPS 2022.</li>
   <li>[2022/07] One paper accepted by ECCV 2022.</li>
 </ul>
-
-<!-- <p>
-* One paper got accepted by ICRA 2020.
-* One paper got accepted by CVPR 2019.
-* One paper got accepted by ICLR 2019.
-* One paper got accepted by ECCV 2018.
-<\p>
- -->
 
 <script type="text/javascript">
     function hideshow(which){
@@ -95,8 +100,6 @@ I obtained my Bachelor's degree from Sun Yat-sen University, supervised by <a hr
     }
 </script>
 
-<!-- <h2 id="codebase">Codebase</h2> -->
-<!-- <hr style="margin-top:-16px;margin-bottom:10px;" /> -->
 
 <h2 id="codebase" style="color:rgb(59, 103, 236)">Codebase</h2>
 <hr style="margin-top:-16px;margin-bottom:10px;" />
@@ -111,6 +114,7 @@ I obtained my Bachelor's degree from Sun Yat-sen University, supervised by <a hr
         <a href="https://github.com/open-mmlab/OpenPCDet" style="">
             OpenPCDet: An Open-source Toolbox for 3D Object Detection from Point Cloud
         </a>
+        <br>
         <br />
         <font color="#000000">OpenPCDet Development Team </font>
         <br />
@@ -120,6 +124,7 @@ I obtained my Bachelor's degree from Sun Yat-sen University, supervised by <a hr
             June 2020
             </em> 
         </font>
+        <br>
         <br />
         <a href="https://github.com/open-mmlab/OpenPCDet" style="">[Code]</a> &nbsp;   
             <a href="javascript:hideshow(document.getElementById('OpenPCDet'))"> [Bibtex] </a> &nbsp; 
@@ -148,7 +153,7 @@ I obtained my Bachelor's degree from Sun Yat-sen University, supervised by <a hr
 
 
 
-<h2 id="publications" style="color:rgb(59, 103, 236)">Publications</h2>
+<h2 id="publications" style="color:rgb(59, 103, 236)">Selected Publications <a href="https://scholar.google.com/citations?user=zWfNZnIAAAAJ&hl=en">[Google Scholar]</a></h2>
 <hr style="margin-top:-16px;margin-bottom:10px;" />
 
 <p>*: Equal Contribution</p>
@@ -161,7 +166,183 @@ I obtained my Bachelor's degree from Sun Yat-sen University, supervised by <a hr
 
 
 <!-- **2022:** -->
-<ul>
+<div class="publication">
+  <img src="content/images/pla_teaser.gif" class="publogo">
+  <p> 
+      <strong>
+          <a href="https://arxiv.org/pdf/2211.16312.pdf">PLA: Language-driven Open-Vocabulary 3D Scene Understanding</a>
+      </strong>
+      <br>
+      Runyu Ding*, <b>Jihan Yang*</b>, Chuhui Xue, Wenqing Zhang, Song Bai, Xiaojuan Qi.
+      <br>
+      <em>IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2023</em>
+      <br>
+      <span class="links">
+          <a href="https://arxiv.org/pdf/2211.16312.pdf">[PDF]</a>
+          <a href="https://dingry.github.io/projects/PLA">[Project Page]</a>
+          <a href="https://github.com/CVMI-Lab/PLA">[Code]</a><a href="https://github.com/CVMI-Lab/PLA"><img alt="GitHub stars" style="vertical-align:middle" src="https://img.shields.io/github/stars/CVMI-Lab/PLA?style=social" /> </a>
+      </span>
+  </p>
+</div>
+<br>
+<br>
+
+
+<div class="publication">
+  <img src="content/images/sparsekd_teaser.png" class="publogo" style="width:210px ;padding-right:10px; padding-left:10px">
+  <p> 
+      <strong>
+        <a href="https://arxiv.org/abs/2205.15156">Towards Efficient 3D Object Detection with Knowledge Distillation</a>
+      </strong>
+      <br>
+      <b>Jihan Yang</b>, Shaoshuai Shi, Runyu Ding, Zhe Wang, Xiaojuan Qi
+      <br>
+      <em>Advances in Neural Information Processing Systems (NeurIPS) 2022.</em>
+      <br>
+      <span class="links">
+          <a href="https://arxiv.org/abs/2205.15156">[PDF]</a>
+          <a href="https://github.com/CVMI-Lab/SparseKD">[Code]</a> <a href="https://github.com/CVMI-Lab/SparseKD"><img alt="GitHub stars" style="vertical-align:middle" src="https://img.shields.io/github/stars/CVMI-Lab/SparseKD?style=social" /> </a>
+      </span>
+  </p>
+</div>
+<br>
+<br>
+<br>
+<br>
+
+
+<div class="publication">
+  <img src="content/images/st3d++_teaser.png" class="publogo" style="padding-bottom:40px;">
+  <p> 
+      <strong>
+        <a href="https://arxiv.org/abs/2108.06682">ST3D++: Self-training for Unsupervised Domain Adaptation on 3D Object Detection</a>
+      </strong>
+      <br>
+      <b>Jihan Yang</b>, Shaoshuai Shi, Zhe Wang, Hongsheng Li, Xiaojuan Qi
+      <br>
+      <em>IEEE Transactions on Pattern Analysis and Machine Intelligence (T-PAMI) 2022.</em>
+      <br>
+      <span class="links">
+          <a href="https://arxiv.org/abs/2108.06682">[PDF]</a>
+          <a href="https://github.com/CVMI-Lab/ST3D">[Code]</a> <a href="https://github.com/CVMI-Lab/ST3D"><img alt="GitHub stars" style="vertical-align:middle" src="https://img.shields.io/github/stars/CVMI-Lab/ST3D?style=social" /> </a>
+      </span>
+  </p>
+</div>
+<br>
+<br>
+
+<div class="publication">
+  <img src="content/images/doda_teaser.png" class="publogo" style="padding-bottom:20px;">
+  <p> 
+      <strong>
+        <a href="https://arxiv.org/abs/2204.01599">DODA: Data-oriented Sim-to-Real Domain Adaptation for 3D Indoor Semantic Segmentation</a>
+      </strong>
+      <br>
+      Runyu Ding*, <b>Jihan Yang*</b>, Xiaojuan Qi
+      <br>
+      <em>European Conference on Computer Vision (ECCV), 2022.</em>
+      <br>
+      <span class="links">
+          <a href="https://arxiv.org/abs/2204.01599">[PDF]</a>
+          <a href="https://github.com/CVMI-Lab/DODA">[Code]</a> <a href="https://github.com/CVMI-Lab/DODA"><img alt="GitHub stars" style="vertical-align:middle" src="https://img.shields.io/github/stars/CVMI-Lab/DODA?style=social" /> </a>
+      </span>
+  </p>
+</div>
+<br>
+<br>
+
+
+<div class="publication">
+  <img src="content/images/dars_teaser.png" class="publogo" style="padding-bottom:20px;">
+  <p> 
+      <strong>
+        <a href="https://arxiv.org/abs/2107.11279">Re-distributing Biased Pseudo Labels for Semi-supervised Semantic Segmentation: A Baseline Investigation</a>
+      </strong>
+      <br>
+      Ruifei He*, <b>Jihan Yang*</b>, Xiaojuan Qi
+      <br>
+      <em>IEEE International Conference on Computer Vision (ICCV), 2021.</em>
+      <span style="color:red;"><strong>[Oral]</strong></span>
+      <br>
+      <span class="links">
+          <a href="https://arxiv.org/abs/2107.11279">[PDF]</a>
+          <a href="https://github.com/CVMI-Lab/DARS">[Code]</a> <a href="https://github.com/CVMI-Lab/DARS"><img alt="GitHub stars" style="vertical-align:middle" src="https://img.shields.io/github/stars/CVMI-Lab/DARS?style=social" /> </a>
+      </span>
+  </p>
+</div>
+<br>
+<br>
+
+
+<div class="publication">
+  <img src="content/images/st3d_teaser.png" class="publogo" style="padding-bottom:20px;">
+  <p> 
+      <strong>
+        <a href="https://arxiv.org/abs/2103.05346">ST3D: Self-training for Unsupervised Domain Adaptation on 3D Object Detection</a>
+      </strong>
+      <br>
+      <b>Jihan Yang*</b>, Shaoshuai Shi*, Zhe Wang, Hongsheng Li, Xiaojuan Qi
+      <br>
+      <em>IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2021.</em>
+      <br>
+      <span class="links">
+          <a href="https://arxiv.org/abs/2103.05346">[PDF]</a>
+          <a href="https://github.com/CVMI-Lab/ST3D">[Code]</a> <a href="https://github.com/CVMI-Lab/ST3D"><img alt="GitHub stars" style="vertical-align:middle" src="https://img.shields.io/github/stars/CVMI-Lab/ST3D?style=social" /> </a>
+      </span>
+  </p>
+</div>
+<br>
+<br>
+
+
+
+<div class="publication">
+  <img src="content/images/apoda_teaser.png" class="publogo" style="padding-bottom:20px;">
+  <p> 
+      <strong>
+        <a href="https://arxiv.org/abs/1912.08954">An adversarial perturbation oriented domain adaptation approach for semantic segmentation</a>
+      </strong>
+      <br>
+      <b>Jihan Yang</b>, Ruijia Xu, Ruiyu Li, Xiaojuan Qi, Xiaoyong Shen, Guanbin Li, Liang Lin
+      <br>
+      <em>AAAI, 2020.</em>
+      <br>
+      <span class="links">
+          <a href="https://arxiv.org/abs/1912.08954">[PDF]</a>
+      </span>
+  </p>
+</div>
+<br>
+<br>
+
+
+<div class="publication">
+  <img src="content/images/afn_teaser.png" class="publogo" style="padding-bottom:20px;">
+  <p> 
+      <strong>
+        <a href="https://arxiv.org/abs/1811.07456">Larger Norm More Transferable: An Adaptive Feature Norm Approach for Unsupervised Domain Adaptation</a>
+      </strong>
+      <br>
+      Ruijia Xu, Guanbin Li, <b>Jihan Yang</b>, Liang Lin
+      <br>
+      <em>IEEE International Conference on Computer Vision (ICCV), 2019.</em><span style="color:red;"><strong>[Oral]</strong></span>
+      <br>
+      <span class="links">
+          <a href="https://arxiv.org/abs/1811.07456">[PDF]</a>
+          <a href="https://github.com/jihanyang/AFN">[Code]</a> <img alt="GitHub stars" style="vertical-align:middle" src="https://img.shields.io/github/stars/jihanyang/AFN?style=social" />
+      </span>
+      <br>
+      <br>
+      <span style="color: #FF0000">Best Paper Award Nomination (one of the seven among 1,075 accepted papers) refer to <a href="https://iccv2019.thecvf.com/program/main_conference" style="">here.</a></span>
+  </p>
+</div>
+<br>
+<br>
+<br>
+<br>
+
+
+<!-- <ul>
 <li><a href="https://arxiv.org/pdf/2211.16312.pdf">Language-driven Open-Vocabulary 3D Scene Understanding</a><br />
     Runyu Ding*, <b>Jihan Yang*</b>, Chuhui Xue, Wenqing Zhang, Song Bai, Xiaojuan Qi<br />
     <em>IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2023.</em>
@@ -185,18 +366,10 @@ Runyu Ding*, <b>Jihan Yang*</b>, Xiaojuan Qi<br />
 <a href="https://github.com/CVMI-Lab/DODA">[Code]</a><a href="https://github.com/CVMI-Lab/DODA"><img alt="GitHub stars" style="vertical-align:middle" src="https://img.shields.io/github/stars/CVMI-Lab/DODA?style=social" /> </a>
 </p>
   </li>
-  <li>
-    <p><a href="https://openaccess.thecvf.com/content/CVPR2022/html/He_Knowledge_Distillation_As_Efficient_Pre-Training_Faster_Convergence_Higher_Data-Efficiency_and_CVPR_2022_paper.html">Knowledge Distillation as Efficient Pre-training: Faster Convergence, Higher Data-efficiency,
-        and Better Transferability</a><br />
-        Ruifei He, Shuyang Sun, <b>Jihan Yang</b>, Song Bai, Xiaojuan Qi.<br />
-<em>IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2022.</em> 
-<a href="https://github.com/CVMI-Lab/KDEP">[Code]</a>  <a href="https://github.com/CVMI-Lab/KDEP"><img alt="GitHub stars" style="vertical-align:middle" src="https://img.shields.io/github/stars/CVMI-Lab/KDEP?style=social" /> </a>
- </p>
-  </li>
-</ul>
+</ul> -->
 
 <!-- **2021:** -->
-<ul>
+<!-- <ul>
   <li>
     <p><a href="https://arxiv.org/abs/2107.11279">Re-distributing Biased Pseudo Labels for Semi-supervised Semantic Segmentation: A Baseline Investigation</a><br />
         Ruifei He*, <b>Jihan Yang*</b>, Xiaojuan Qi<br />
@@ -210,26 +383,20 @@ Runyu Ding*, <b>Jihan Yang*</b>, Xiaojuan Qi<br />
 <em>IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2021.</em> 
  <a href="https://github.com/CVMI-Lab/ST3D">[Code]</a>  <a href="https://github.com/CVMI-Lab/ST3D"><img alt="GitHub stars" style="vertical-align:middle" src="https://img.shields.io/github/stars/CVMI-Lab/ST3D?style=social" /> </a></p>
   </li>
-</ul>
+</ul> -->
 
 <!-- **2020** -->
-<ul>
-  <li>
-    <p><a href="https://arxiv.org/abs/2008.12599">The Top-Performing LiDAR-only Solutions for 3D Detection / 3D Tracking / Domain Adaptation of Waymo Open Dataset Challenges</a><br />
-Shaoshuai Shi, Chaoxu Guo, <b>Jihan Yang</b>, Hongsheng Li<br />
-<em>Technical report of top-performing LiDAR-only solutions to Waymo Open Dataset Challenges at Workshop of CVPR 2020.</em> 
- <a href="https://github.com/open-mmlab/OpenPCDet">[Code]</a>  <a href="https://github.com/open-mmlab/OpenPCDet"><img alt="GitHub stars" style="vertical-align:middle" src="https://img.shields.io/github/stars/open-mmlab/OpenPCDet?style=social" /> </a></p>
-  </li>
+<!-- <ul>
   <li>
     <p><a href="https://arxiv.org/abs/1912.08954">An adversarial perturbation oriented domain adaptation approach for semantic segmentation</a> <br />
 <b>Jihan Yang</b>, Ruijia Xu, Ruiyu Li, Xiaojuan Qi, Xiaoyong Shen, Guanbin Li, Liang Lin<br />
 <em>AAAI, 2020.</em> </p>
   </li>
-</ul>
+</ul> -->
 
 <!-- **Before 2020** -->
 
-<ul>
+<!-- <ul>
   <li>
     <p><a href="https://arxiv.org/abs/1811.07456">Larger norm more transferable: An adaptive feature norm approach for unsupervised domain adaptation</a><br />
  Ruijia Xu, Guanbin Li, <b>Jihan Yang</b>, Liang Lin<br />
@@ -237,21 +404,15 @@ Shaoshuai Shi, Chaoxu Guo, <b>Jihan Yang</b>, Hongsheng Li<br />
   <a href="https://github.com/jihanyang/AFN" style="">[Code]</a> <img alt="GitHub stars" style="vertical-align:middle" src="https://img.shields.io/github/stars/jihanyang/AFN?style=social" /><br />
 <span style="color: #FF0000">Best Paper Award Nomination (one of the seven among 1,075 accepted papers) refer to <a href="https://iccv2019.thecvf.com/program/main_conference" style="">here.</a></span></p>
   </li>
-</ul>
+</ul> -->
 
-<!-- ## Invited Talks
-<hr style="margin-top:-16px;margin-bottom:10px;" />
-
-* [2020-06-24] VALSE Webinar: Deep Learning on Point Clouds for 3D Object Detection. [[Link (Chinese)]](https://www.bilibili.com/video/BV15K411H7wf?from=search&seid=2278904913441168463)
-* [2020-06-16] PV-RCNN: The Top-Performing LiDAR-only Solutions for 3D Detection / 3D Tracking / Domain Challenges of Waymo Open Dataset Challenges. [[Link]](https://sites.google.com/view/cvpr20-scalability/archived-talks/challenges)
- -->
 
 <h2 id="experience" style="color:rgb(59, 103, 236)">Experience</h2>
 <hr style="margin-top:-16px;margin-bottom:10px;" />
 
 <ul>
   <li>
-    <p>Research Intern, May 2020 - Present, Autonomous Driving Group of SenseTime, China.<br />
+    <p>Research Intern, May 2020 - Oct 2020, Autonomous Driving Group of SenseTime, China.<br />
 Working with Dr. Zhe Wang.</p>
   </li>
 </ul>
@@ -300,6 +461,31 @@ Working with Dr. Zhe Wang.</p>
     </tr>
    
 </tbody></table>
+
+<!-- ###################### -->
+
+<h2 id="Academic_services" style="color:rgb(59, 103, 236)">Academic Services</h2>
+<hr style="margin-top:-16px;margin-bottom:10px;" />
+Conference Reviewer: CVPR'21/22/23, ICCV'21, ECCV'22, AAAI'21, IROS'23
+
+
+
+<h2 id="Teaching" style="color:rgb(59, 103, 236)">Teaching</h2>
+<hr style="margin-top:-16px;margin-bottom:10px;" />
+<table id="Teaching" border="0" width="100%">
+	<tbody>
+		<tr>
+			<td>ELEC3249 Pattern Recognition and Machine Intelligence</td><td></td><td>2022-2023</td>
+		</tr>
+		<tr>
+			<td>ENGG1310 Electricity and Electronics</td><td></td><td>2021-2022</td>
+		</tr>
+		<tr>
+			<td>ELEC3249 Pattern Recognition and Machine Intelligence</td><td></td><td>2020-2021</td>
+		</tr>
+	</tbody>
+</table>
+
 
 <div width="80%" style="margin:10px auto;height: 150px; pointer-events: none;">
 <!-- <script type="text/javascript" id="clustrmaps" src="//cdn.clustrmaps.com/map_v2.js?d=dna1gh75RFxuLTLMZdN7u5SSyiCEmnOtvSjR75TKtTQ&cl=ffffff&w=a"></script> -->
