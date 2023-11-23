@@ -73,6 +73,8 @@
               <span class="author-block">
                 <a href="https://dingry.github.io/" target="_blank">Runyu Ding</a><sup>1</sup>,</span>
               <span class="author-block">
+                <a href="https://www.researchgate.net/profile/Weipeng-Deng-2/" target="_blank">Weipeng Deng</a><sup>1</sup>,</span>
+              <span class="author-block">
                 <a href="https://wang-zhe.me/" target="_blank">Zhe Wang</a><sup>2</sup>,</span>
               <span class="author-block">
                 <a href="https://xjqi.github.io/" target="_blank">Xiaojuan Qi</a><sup>1</sup>,</span>  
@@ -145,7 +147,7 @@
   <div class="hero-body">
     <div class="container" style="margin-left: 12%;">
   <div style="position:relative; margin-bottom: 5px;">
-    <strong><span style="font-size:larger; font-style:italic">(a) Novel Catgory Segmentation</span></strong>
+    <strong><span style="font-size:larger; font-style:italic"> Novel Catgory Segmentation</span></strong>
 </div>
 <div style="overflow: auto; display: grid; margin-bottom: 10px;">
   <table>
@@ -183,17 +185,18 @@
           <td>
               <div class="show-hide-wrapper">
               <div >
-                  <center><img style="width: 230px;" src="static/images/wm.png"></center>
+                  <center><img style="width: 230px;" src="static/images/ladder.png"></center>
               </div>
               </div>
               <div style="text-align: center; font-size: large;">
-                  <span style="font-style:italic">Washing Machine</span>
+                  <span style="font-style:italic">Ladder</span>
               </div>
           </td>
       </tr>
     </tbody></table>
-      <div style="position:relative; margin-bottom: 5px;">
-        <strong><span style="font-size:larger; font-style:italic">(b) Novel Catgory Heatmap</span></strong>
+  
+    <div style="position:relative; margin-bottom: 5px;">
+        <strong><span style="font-size:larger; font-style:italic">Novel Catgory Heatmap</span></strong>
     </div>
     <table>
       <tbody><tr style="display:table-row">
@@ -238,10 +241,16 @@
                 <span style="font-style:italic">Trash Can</span>
             </div>
         </td>
-    </tr>
-      
-  </tbody></table>
+      </tr>
+      </tbody
+    ></table>
   </div>
+
+  <div style="position:relative; margin-bottom: 5px;">
+    <strong><span style="font-size:larger; font-style:italic">Grounded 3D Reasoning</span></strong>
+  </div>
+  <center><img src="static/images/regiongr.png"></center>
+
 </div>
 </div>
 </section>
@@ -295,8 +304,10 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
+          <p style="font-weight:bold;">TL;DR:  We propose a lightweight and scalable regional point-language contrastive learning framework for open-world 3D scene understanding. </p>
           <p>
-            Existing 3D scene understanding tasks have achieved high performance on close-set benchmarks but fail to handle novel categories in real-world applications. To this end, we propose a Regional Point-Language Contrastive learning framework, namely RegionPLC, for open-world 3D scene understanding, which equips models trained on closed-set datasets with open-vocabulary recognition capabilities. We propose dense visual prompts to elicit region-level visual-language knowledge from 2D foundation models via captioning, which further allows us to build dense regional point-language associations. Then, we design a point-discriminative contrastive learning objective to enable point-independent learning from captions for dense scene understanding. We conduct extensive experiments on ScanNet, ScanNet200, and nuScenes datasets. Our RegionPLC significantly outperforms previous base-annotated 3D open-world scene understanding approaches by an average of 11.6% and 6.6% for semantic and instance segmentation, respectively. It also shows promising open-world results in absence of any human annotation with low training and inference costs.
+            We propose a lightweight and scalable Regional Point-Language Contrastive learning framework, namely RegionPLC, for open-world 3D scene understanding, aiming to identify and recognize open-set objects and categories. 
+Specifically, based on our empirical studies, we introduce a 3D-aware SFusion strategy that fuses 3D vision-language pairs derived from multiple 2D foundation models, yielding high-quality, dense region-level language descriptions without human 3D annotations. Subsequently, we devise a region-aware point-discriminative contrastive learning objective to enable robust and effective 3D learning from dense regional language supervision. We carry out extensive experiments on ScanNet, ScanNet200, and nuScenes datasets, and our model outperforms prior 3D open-world scene understanding approaches by an average of 17.2% and 9.1% for semantic and instance segmentation, respectively, while maintaining greater scalability and lower resource demands. Furthermore, our method has the flexibility to be effortlessly integrated with language models to enable open-ended grounded 3D reasoning without extra task-specific training.
           </p>
         </div>
       </div>
@@ -314,17 +325,18 @@
       <h2 class="title is-3">Approach</h2>
       <!-- <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths"> -->
-          <h2 class="title is-5">Regional Visual Prompts and Dense Captions</h2>
-          We utilize propose to explore region-level visual prompts to obtain dense captions from 2D foundation models for precise and accurate language supervision. We introduce two region-level visual prompts, i.e. image patch via sliding-window and object proposals from 2D detection models, and then extract captions for them from vision-language foundation models. The two types of visual prompts are orthogonal and can jointly provide dense captions for each scene.
-
-          <center><img src="static/images/figure1.png"></center>
+          <h2 class="title is-5"> 
+            Regional 3D-Language Association</h2>
+            we begin by conducting a comprehensive examination of various 2D foundation models (e.g., image captioning, dense captioning, and detection models along with visual prompting techniques for their capability to generate region-level 3D-language pairs.
+            Based on our examination, we propose a 3D-aware supplementary-oriented fusion strategy to alleviate ambiguities and conflicts encountered when combining paired 3D-language data from multiple 2D models, ultimately delivering high-quality dense region-level 3D-language pairs.
+          <center><img src="static/images/framework_pair.jpg"></center>
           <br>
 
 
           <h2 class="title is-5">Point-discriminative Contrastive Learning</h2>
-          To better transfer dense visual-language knowledge, we propose a point-discriminative contrastive objective that allows point-wise embeddings to be optimized in a discriminative manner instead of being overwhelmed by nearby unrelated points as in CLIP-style contrastive objective. Such point-discriminative optimization facilitates dense point-wise prediction and open-world understanding with more diverse and semantic-rich point features.
+          we introduce a region-aware point-discriminative contrastive loss that prevents the optimization of point-wise embeddings from being disturbed by nearby points from unrelated semantic categories, enhancing the discriminativeness of learned point-wise embeddings. The region-aware design further normalizes the contribution of multiple region-level 3D-language pairs, regardless of their region sizes, making feature learning more robust.
 
-          <center><img src="static/images/figure2.png"></center>
+          <center><img src="static/images/framework_loss.jpg" width="400px"></center>
     
         <!-- </div>
       </div> -->
@@ -344,13 +356,13 @@
         <h2 class="title is-5">Base-annotated Open-World Segmentation</h2>
 
         <center>
-        <img src="static/images/table1.png">
+        <img src="static/images/table1.jpg">
         </center>
         <br>
 
         <h2 class="title is-5">Annotation-free Open-World Segmentation</h2>
         <center>
-          <img src="static/images/table2.png">
+          <img src="static/images/table2.jpg">
           </center>
           <br>
 
