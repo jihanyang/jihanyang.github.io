@@ -70,6 +70,16 @@
           font-size: 16px;
         }
         .publication .links .link-icon { width: 18px; height: 18px; }
+        .service-groups { display: grid; grid-template-columns: 1fr 1.35fr; gap: 32px; margin-top: 22px; }
+        .service-group h3 { font-size: 18px; font-weight: normal; color: #71869a; margin: 0 0 14px; }
+        .service-group ul { list-style: none; padding: 0; margin: 0; }
+        .conference-venues { display: flex; flex-wrap: wrap; gap: 10px 18px; }
+        .conference-venues li { line-height: 1.5; }
+        .journal-venues li { line-height: 1.5; margin-bottom: 12px; }
+        .journal-venues span { white-space: nowrap; color: #71869a; }
+        @media (max-width: 640px) {
+          .service-groups { grid-template-columns: 1fr; gap: 24px; }
+        }
     </style>
     <title>Jihan Yang's Homepage</title>
     <!-- <link rel="icon" href="../content/images/icon.png"> -->
@@ -664,23 +674,22 @@ I obtained my Bachelor's degree from Sun Yat-sen University.
 
 <h2 id="Academic_services">Academic Services</h2>
 <hr style="margin-top:-16px;margin-bottom:10px;" />
-Conference Reviewer:
-<ul>
-  <li>CVPR: 21/22/23/24/25</li>
-  <li>ICCV: 21/25</li>
-  <li>ECCV: 22/24</li>
-  <li>NeurIPS: 23/24</li>
-  <li>ICLR: 24/25</li>
-  <li>ICML: 25</li>
-  <li>IROS: 23</li>
-  <li>AAAI: 21</li>
-  <li>MM: 24</li>
-</ul> 
-Journal Reviewer:
-<ul>
-  <li>IEEE Transactions on Pattern Analysis and Machine Intelligence (T-PAMI)</li>
-  <li>International Journal of Computer Vision (IJCV)</li>
-</ul> 
+<div class="service-groups">
+  <section class="service-group" aria-labelledby="conference-reviewing">
+    <h3 id="conference-reviewing">Conference Reviewer</h3>
+    <ul class="conference-venues">
+      <li>CVPR</li><li>ICCV</li><li>ECCV</li><li>NeurIPS</li><li>ICLR</li>
+      <li>ICML</li><li>IROS</li><li>AAAI</li><li>MM</li>
+    </ul>
+  </section>
+  <section class="service-group" aria-labelledby="journal-reviewing">
+    <h3 id="journal-reviewing">Journal Reviewer</h3>
+    <ul class="journal-venues">
+      <li>IEEE Transactions on Pattern Analysis and Machine Intelligence <span>(T-PAMI)</span></li>
+      <li>International Journal of Computer Vision <span>(IJCV)</span></li>
+    </ul>
+  </section>
+</div>
 
 
 <!--
