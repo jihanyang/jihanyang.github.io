@@ -694,11 +694,13 @@ Journal Reviewer:
 </table>
 -->
 
-<div width="80%" style="margin:10px auto;height: 150px; pointer-events: none;">
-<!-- <script type="text/javascript" id="clustrmaps" src="//cdn.clustrmaps.com/map_v2.js?d=dna1gh75RFxuLTLMZdN7u5SSyiCEmnOtvSjR75TKtTQ&cl=ffffff&w=a"></script> -->
-<!-- <script type="text/javascript" id="clustrmaps" src="//cdn.clustrmaps.com/map_v2.js?cl=b8b8b8&w=300&t=n&d=dna1gh75RFxuLTLMZdN7u5SSyiCEmnOtvSjR75TKtTQ&co=ffffff&cmo=fc1a0b&cmn=21c983&ct=827d7d"></script> -->
-<script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=300&t=tt&d=bsE8tO7zuYstQlZ4LK-y0ELcK4Uxw6_BtV4Opk5d6GY&co=2d78ad&cmo=3acc3a&cmn=ff5353&ct=ffffff'></script>
-<!-- <a href="https://clustrmaps.com/site/1apwn" title="Visit tracker"><img src="//clustrmaps.com/map_v2.png?cl=59bdf5&w=300&t=tt&d=dna1gh75RFxuLTLMZdN7u5SSyiCEmnOtvSjR75TKtTQ&co=ffffff&ct=b8b3b3" /></a> -->
+<div id="visitor-statistics" style="max-width: 300px; margin: 40px auto 10px; text-align: center;">
+  <h2 style="font-size: 20px;">Visitors</h2>
+  <p id="visitor-status" role="status" style="font-size: 15px; color: #71869a;">Loading visitor statistics…</p>
+  <script type="text/javascript" id="clustrmaps" src="https://cdn.clustrmaps.com/map_v2.js?cl=ffffff&amp;w=300&amp;t=tt&amp;d=bsE8tO7zuYstQlZ4LK-y0ELcK4Uxw6_BtV4Opk5d6GY&amp;co=2d78ad&amp;cmo=3acc3a&amp;cmn=ff5353&amp;ct=ffffff"
+    onload="document.getElementById('visitor-status').hidden = true;"
+    onerror="document.getElementById('visitor-status').textContent = 'Visitor statistics are temporarily unavailable because ClustrMaps could not load.';"></script>
+  <noscript>Enable JavaScript to view visitor statistics.</noscript>
 </div>
 <p><br /></p>
 <hr style="margin-top:80px;margin-bottom:10px;" />
